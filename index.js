@@ -1,29 +1,16 @@
 const findMatching = (drivers, string) => {
-    const newDriver = [];
-    for(const name of drivers) {
-        if(name === string || name.toLowerCase() === string.toLowerCase()) {
-            newDriver.push(name)
-        } 
-    } 
-    return newDriver;
+    return drivers.filter(function(newDrivers){
+        return newDrivers.toLowerCase() === string.toLowerCase()
+    });
 }
-const fuzzyMatch = (drivers, strings) => { 
-    const driver = [];
-    for(const name of drivers) {
-        if(name.slice(0, 1) === strings.slice(0, 1)) {
-            driver.push(name)
-        }
-    }
-    return driver;
-}    
+const fuzzyMatch = (drivers, strings) => {
+    return drivers. filter(function(newDrivers){
+        return newDrivers.slice(0, 1) === string.slice(0, 1)
+    });
+}
 const matchName = (drivers, string) => {
-    const newName = [];
-    for(const name of drivers) {
-        if(name.name === string || name.hometown === string) {
-        if(name.name.toLowerCase() === string.toLowerCase() || name.hometown.toLowerCase() === string.toLowerCase()) {
-            newName.push(name)
-        }  
-        }
-    }
-    return newName;
+    return drivers.filter(function(newDrivers){
+        return driver.name === string
+    });
 }
+    
